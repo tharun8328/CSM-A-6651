@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<script>
+    function validate()
+    {
+        var fn = frm.fname.value;
+        for(x in  fn)
+        {
+            ch=fn.charCodeAt(x);
+            if(ch<65||ch>90 && ch<97||ch>122)
+            {
+                alert("Invalid Firstname");
+                return false;
+            }
+        }
+        var ln = frm.lname.value;
+        for(y in  ln)
+        {
+            ch=fn.charCodeAt(y);
+            if(ch<65||ch>90 && ch<97||ch>122)
+            {
+                alert("Invalid Lastname");
+                return false;
+            }
+        }
+    }
+var phn = frm.phone.value;
+var lenp = phm.length;
+if(lenp != 10)
+{
+    alert("Phone Number is should be exactly 10 digits");
+    return false;
+} 
+var pwd1=frm.pwd.value;
+var pwd1=pwd1.length;
+if(pwd1%2==1)
+{
+    alert("Password should contain even number of characters");
+    return false;
+}
+if(pwd1>8)
+{
+    alert("Password should not exceed 8");
+    return false;
+}
+var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w([-.]\w)+$/;
+var mail=frm.mailid.value;
+if (reg.test(mail))
+{
+    alert("Registration Successfull");}
+    else {
+        alert("Invalid Email");
+    return false;
+    }
+return true;
+
+</script>
+<body>
+    <center>
+        <form name="frm" method="POST" action="success.html" onSubmit="return validite()"></form>
+            <fieldset align="center">
+                <table align="center">
+                    <tr><td>First Name:</td>
+                        <td><input type="text" name="fname" value="" size="50" required/></td></tr>                
+                    <tr><td>Last Name:</td>
+                        <td><input type="text" name="lname" value="" size="50" required/>
+                        </td></tr>
+                    <tr><td>Phone No:</td>
+                        <td><input type="text" name="phone" value="" size="50" required/></td></tr>
+                    <tr><td>Mail id:</td>
+                        <td><input type="text" name="mailid" value="" size="50" required/></td></tr>
+                    <tr><td>Gender:</td>
+                        <td>Male: <input type="radio" name="gender" value="" size="50">
+                            Female: <input type="radio" name="gender" value="" size="50"></td></tr>  
+                    <tr><td>DOB:</td>  
+                        <td><input type="date" name="dob" value="" size="50" required/></td></tr>
+                    <tr><td>Username:</td>
+                        <td><input type="text" name="uname" value="" size="50" required/></td></tr>
+                    <tr><td>Password:</td>
+                        <td><input type="password" name="pwd" value="" size="50" required/></td></tr>
+                    <tr><td>Age:</td>
+                        <td><input type="text" name="age" value="" size="50" required/></td></tr>
+                </table>
+                <input type="submit" value="SUBMIT" name="submit"/>
+
+            </fieldset>
+    </center>
+    
+</body>
+</html>hoieeee!! Every happy to see that you are reading my message...
