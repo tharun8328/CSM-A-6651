@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-compatible" content="IE=edge">
+     <title>Page Title</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+     <h1>Welcome to home</h1>  
+     <form action="/home" method="post">
+     <input type="submit" value="logout">
+     </form>                                           
+</body>
+</html>
